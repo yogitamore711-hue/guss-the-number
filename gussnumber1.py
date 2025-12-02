@@ -1,20 +1,23 @@
-import random 
+import random
 
-#Computer genreat a random number
-computerNumber=random.randrange(1,101)
+print("Guess the number")
 
-#computer genreated number is user guess
-userInput=int(input("Enter your number :"))
+# Computer generates random number
+computerNumber = random.randrange(1, 101)
 
-if userInput>computerNumber:
-    print("computer number",computerNumber)
-    print("Your guess number is too high")
-    
-elif userInput<computerNumber:
-    print("computer number",computerNumber)
-    print("Your guess number is too low")
+turns = 0
 
-else:
-    print("computer number",computerNumber)
-    print("Your guess number is correct")
-    
+while True:
+    userInput = int(input("Enter your guess number: "))
+    turns += 1
+
+    if userInput > computerNumber:
+        print("Your guess is too high")
+
+    elif userInput < computerNumber:
+        print("Your guess is too low")
+
+    else:           # userInput == computerNumber
+        print("Your guess is correct!")
+        print("Number of turns =", turns)
+        break
