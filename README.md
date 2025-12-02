@@ -1,0 +1,1 @@
+This project is a simple Guess the Number game where the computer selects a random number and the player tries to guess it. The game gives hints like Too High or Too Low until the correct number is found. It is beginner-friendly and helps understand loops, conditions, and basic input handling.
